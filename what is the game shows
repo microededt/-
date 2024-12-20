@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彩蛋管理中心 - 关于我们</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #555;
+            padding: 0.5rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Hidden ARG clues */
+        .hidden {
+            display: none;
+        }
+        .admin-section {
+            display: none;
+        }
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .team-member {
+            flex: 1 1 calc(33.333% - 1rem);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            background: #fefefe;
+            text-align: center;
+        }
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 0.5rem;
+        }
+        .easter-egg {
+            margin: 2rem 0;
+        }
+        .easter-egg h3 {
+            color: #333;
+        }
+        .easter-egg p {
+            margin: 0.5rem 0;
+        }
+        .hall-of-fame {
+            margin: 2rem 0;
+        }
+        .hall-of-fame input[type="text"] {
+            padding: 0.5rem;
+            margin-right: 0.5rem;
+            width: calc(100% - 2rem);
+        }
+        .hall-of-fame button {
+            padding: 0.5rem 1rem;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .hall-of-fame button:hover {
+            background-color: #555;
+        }
+        .hall-of-fame-list {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>欢迎来到彩蛋管理中心</h1>
+    </header>
+    <nav>
+        <a href="#about">关于我们</a>
+        <a href="#services">服务</a>
+        <a href="#team">团队</a>
+        <a href="#easter-eggs">游戏彩蛋</a>
+        <a href="#hall-of-fame">名人堂</a>
+        <a href="#contact">联系我们</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>关于我们</h2>
+            <p>彩蛋管理中心致力于揭秘历史上最有趣的游戏彩蛋，并为玩家提供独特的解密体验。</p>
+        </section>
+
+        <section id="services">
+            <h2>我们的服务</h2>
+            <ul>
+                <li>彩蛋分析</li>
+                <li>解密工具支持</li>
+                <li>社区分享与互动</li>
+            </ul>
+        </section>
+
+        <section id="team">
+            <h2>我们的团队</h2>
+            <div class="team">
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/100" alt="John Doe">
+                    <h3>John Doe</h3>
+                    <p>CEO & 创始人</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/100" alt="Jane Smith">
+                    <h3>Jane Smith</h3>
+                    <p>首席技术官</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/100" alt="Emily Johnson">
+                    <h3>Emily Johnson</h3>
+                    <p>市场部负责人</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="easter-eggs">
+            <h2>游戏彩蛋</h2>
+            <div class="easter-egg">
+                <h3>Adventure (1979) - 第一个游戏彩蛋</h3>
+                <p>在《Adventure》中，玩家可以找到一个隐藏的房间，房间内显示了开发者 Warren Robinett 的名字。这被认为是历史上第一个电子游戏彩蛋。</p>
+            </div>
+            <div class="easter-egg">
+                <h3>DOOM (1993) - 隐藏关卡</h3>
+                <p>经典射击游戏《DOOM》中，玩家可以通过特定路径进入隐藏关卡，并发现一些开发者的小幽默。</p>
+            </div>
+            <div class="easter-egg">
+                <h3>The Legend of Zelda: Link's Awakening (1993) - 编程者留言</h3>
+                <p>在这款游戏中，玩家输入特定名字后，可以触发开发团队留下的隐藏信息。</p>
+            </div>
+        </section>
+
+        <section id="hall-of-fame">
+            <h2>名人堂</h2>
+            <p>在这里输入您的名字，永久铭刻在我们的名人堂中：</p>
+            <form onsubmit="addToHallOfFame(event)">
+                <input type="text" id="nameInput" placeholder="输入您的名字" required>
+                <button type="submit">提交</button>
+            </form>
+            <div class="hall-of-fame-list" id="hallOfFameList">
+                <!-- Names will appear here -->
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>联系我们</h2>
+            <p>邮箱: contact@eastereggcenter.com</p>
+            <p>电话: (123) 456-7890</p>
+        </section>
+    </div>
+
+    <!-- Hidden ARG content -->
+    <div class="hidden" id="arg-clue">
+        <p>ARG Clue: The key is "Innovation Unlocked".</p>
+    </div>
+
+    <!-- Admin Section -->
+    <div class="admin-section" id="admin">
+        <h2>管理员面板</h2>
+        <form id="update-clue">
+            <label for="clue">更新 ARG 提示：</label><br>
+            <textarea id="clue" name="clue" rows="4" cols="50">The key is "Innovation Unlocked".</textarea><br><br>
+            <button type="button" onclick="updateClue()">保存</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 彩蛋管理中心. 保留所有权利。</p>
+    </footer>
+
+    <script>
+        // Admin access toggle
+        document.addEventListener('keydown', function (event) {
+            if (event.ctrlKey && event.key === 'a') { // Ctrl+A to show admin section
+                const adminSection = document.getElementById('admin');
+                adminSection.style.display = adminSection.style.display === 'block' ? 'none' : 'block';
+            }
+        });
+
+        // Update ARG clue dynamically
+        function updateClue() {
+            const clueContent = document.getElementById('clue').value;
+            document.getElementById('arg-clue').innerHTML = `<p>ARG Clue: ${clueContent}</p>`;
+            alert('提示已成功更新！');
+        }
+
+        // Reveal clue on click (for testing purposes)
+        document.addEventListener('click', function (event) {
+            if (event.target.tagName === 'HEADER') {
+                const clue = document.getElementById('arg-clue');
+                clue.style.display = clue.style.display === 'block' ? 'none' : 'block';
+            }
+        });
+
+        // Add to Hall of Fame
+        function addToHallOfFame(event) {
+            event.preventDefault();
+            const nameInput = document.getElementById('nameInput');
+            const name = nameInput.value.trim();
+            if (name) {
+                const list = document.getElementById('hallOfFameList');
+                const entry = document.createElement('p');
+                entry.textContent = name;
+                list.appendChild(entry);
+                nameInput.value = '';
+            }
+        }
+    </script>
+</body>
+</html>
